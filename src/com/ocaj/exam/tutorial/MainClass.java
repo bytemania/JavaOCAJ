@@ -1,5 +1,7 @@
 package com.ocaj.exam.tutorial;
 
+//import static java.util.Locale.ITALY;
+import static java.util.Locale.*;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -25,6 +27,10 @@ public class MainClass {
 		planetList.add(planet);
 		planetList.add("Gliese 581 c");
 		System.out.println("\nTwo cool planets: " + planetList);
+		
+		System.out.println("Locale: " + ITALY);
+		System.out.println("Locale: " + GERMANY);
+		System.out.println("Locale: " + JAPANESE);
 	}
 
 }
