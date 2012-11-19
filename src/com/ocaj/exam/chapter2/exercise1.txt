@@ -1,0 +1,25 @@
+1)
+Conditional Statements:
+case;
+default;
+else;
+if;
+switch.
+
+2)
+Iteration Statements:
+do;
+for;
+while.
+
+3)
+Transfer control Statements:
+break;
+continue;
+return.
+
+4)
+Exception Handling Statements:
+catch;
+finally;
+try.
