@@ -46,6 +46,206 @@ public class StringExamples {
 		
 		System.out.println(title2 + (flatShovels + roundPointShovels));
 		
+		String pirateMessage = "  Buried Treasure Chest!  ";
+		
+		char c1 = pirateMessage.charAt(0);
+		char c2 = pirateMessage.charAt(2);
+		char c3 = pirateMessage.charAt(23);
+		char c4 = pirateMessage.charAt(24);
+		char c5 =' ';
+		try {
+			c5 = pirateMessage.charAt(45);
+		}
+		catch(StringIndexOutOfBoundsException e){
+			System.out.println("C5 index error:" +e.getMessage());
+		}
+		
+		System.out.println(c1 + " " + c2 + " " + c3 + " " + c4 + " " + c5);
+		
+		int i1 = pirateMessage.indexOf('u');
+		
+		int i2 = pirateMessage.indexOf('u',9);
+		
+		int i3 = pirateMessage.indexOf("sure");
+		
+		int i4 = pirateMessage.indexOf("Treasure",10);
+		
+		int i5 = pirateMessage.indexOf("u",100);
+		
+		System.out.println(i1 + " " + i2 + " " + i3 + " " + i4 + " " + i5);
+		
+		int i = pirateMessage.length();
+		
+		String string = "box";
+		
+		int value1 = string.length();
+		
+		String[] stringArray = new String[3];
+		
+		int value2 = stringArray.length;
+		
+		System.out.println(i + " " + value1 + " " + value2);
+		
+		String c = pirateMessage.concat("Weigh anchor!");
+		
+		System.out.println("C:" + c + " PIRATE:" + pirateMessage);
+		
+		String s1 = pirateMessage.replace('B', 'J');
+		
+		String s2 = pirateMessage.replace('\u0020', 'X');
+		
+		String s3 = pirateMessage.replace("Chest", "Coins");
+		
+		System.out.println("S1:" + s1);
+		System.out.println("S2:" + s2);
+		System.out.println("S3:" + s3);
+		
+		boolean b1 = pirateMessage.startsWith("  Buried Treasure");
+		
+		boolean b2 = pirateMessage.startsWith("  Discovered");
+		
+		boolean b3 = pirateMessage.startsWith("Treasure", 8);
+		
+		boolean b4 = pirateMessage.startsWith("Treasure", 9);
+		
+		System.out.println("b1:" + b1);
+		System.out.println("b2:" + b2);
+		System.out.println("b3:" + b3);
+		System.out.println("b4:" + b4);
+		
+		
+		boolean e1 = pirateMessage.endsWith("Treasure Chest!  ");
+		boolean e2 = pirateMessage.endsWith("Treasure Chest! ");
+		
+		System.out.println("e1:" + e1);
+		System.out.println("e2:" + e2);
+		
+		String ss1 = pirateMessage.substring(9);
+		String ss2 = pirateMessage.substring(9,10);
+		String ss3 = pirateMessage.substring(9,23);
+		
+		try{
+			String ss4 = pirateMessage.substring(9,8);
+			System.out.println("SS4:"  + ss4 );
+		}
+		catch(StringIndexOutOfBoundsException e){
+			System.out.println("SS4 EXCEPTION:" + e.getMessage());
+		}
+		
+		String ss5 = pirateMessage.substring(9,9);
+		
+		System.out.println("SS1:"  + ss1 );
+		System.out.println("SS2:"  + ss2 );
+		System.out.println("SS3:"  + ss3 );
+		System.out.println("SS5:"  + ss5 );
+		
+		System.out.println("Empty Test" + (" ".equals("\u0020")));
+		
+		String t = pirateMessage.trim();
+		
+		System.out.println("T:" + t);
+		
+		String t1 = "\t   One day i Will Be Like You\t   ";
+		
+		System.out.println("|" + t1 + "|");
+		
+		String l1 = pirateMessage.toLowerCase();
+		
+		System.out.println("L1:" + l1);
+	
+		String u1 = pirateMessage.toUpperCase();
+		
+		System.out.println("U1:" + u1);
+		
+		Boolean bb1 = pirateMessage.equalsIgnoreCase("  Buried TREASURE Chest!  ");
+		Boolean bb2 = pirateMessage.equalsIgnoreCase("  Buried XXXXXXXX Chest!  ");
+		
+		System.out.println("BB1:" + bb1);
+		System.out.println("BB2:" + bb2);
+		
+		String msg = "   Maroon the First Mate with a flagon of water and a pistol!   ";
+		
+		String msg1 = msg.trim();
+		msg1 = msg1.replace("First Mate", "Quartermaster");
+		msg1 = msg1.substring(0, 47);
+		
+		System.out.println("MSG1:" +msg1);
+		
+		msg = msg.trim().replace("First Mate", "Quartermaster").substring(0 ,47) + ".";
+
+		System.out.println("MSG:" + msg);
+	
+		StringBuilder mateyMessage = new StringBuilder("Shiver Me Timbers!");
+		
+		System.out.println("mateyMessage:" +mateyMessage.append(" Bad Storm!"));
+		
+		StringBuilder e = new StringBuilder("Examples:");
+		e.append(" ").append("1");
+		e.append(" ").append(new StringBuffer("2"));
+		e.append(" ").append('\u0031');
+		e.append(" ").append((int) 2);
+		e.append(" ").append(1L);
+		e.append(" ").append(2F);
+		e.append(" ").append(1D);
+		e.append(" ").append(true);
+		e.append(" ").append(new Boolean(true));
+		
+		System.out.println(e);
+	
+		mateyMessage = new StringBuilder("Shiver Me Tim");
+		System.out.println("mateyMessage:" + mateyMessage.insert(13, " and Bricks!"));
+		
+		mateyMessage = new StringBuilder("Shiver Me Tim");
+		System.out.println("mateyMessage0:" + mateyMessage.delete(6, 16));
+		
+		mateyMessage = new StringBuilder("Shiver Me Tim");
+		System.out.println("mateyMessage1:" + mateyMessage.deleteCharAt(5));
+		
+		StringBuilder r = new StringBuilder("part");
+		r.reverse();
+		
+		System.out.println("It's a " + r + "!" );
+	
+		StringBuilder sb0 = new StringBuilder();
+		StringBuilder sb1 = new StringBuilder("New String Builder1");
+		CharSequence cs2 = new String("Hello");
+		
+		StringBuilder sb2 = new StringBuilder(cs2);
+		StringBuilder sb3 = new StringBuilder("Hello World!");
+
+		String msg011 = "WALK THE PLANK!";
+		String msg2 = "WALK THE PLANK!";
+		String msg3 = ("WALK THE PLANK!");
+		String msg4 = new String("WALK THE PLANK!");
+	
+		System.out.println("MSG1 eq MSG2:" + msg011.equals(msg2));
+		System.out.println("MSG1 eq MSG3:" + msg011.equals(msg3));
+		System.out.println("MSG1 eq MSG4:" + msg011.equals(msg4));
+		System.out.println("MSG2 eq MSG3:" + msg2.equals(msg3));
+		System.out.println("MSG3 eq MSG4:" + msg3.equals(msg4));		
+		
+		String cmd = "Set Sail!";
+		String command = cmd;
+		
+		System.out.println("cmd == command:" + (cmd == command));
+		
+		String interjection1 = "Arrrgh!";
+		String interjection2 = "Arrrgh!";
+		
+		System.out.println("cmd == command:" + interjection1 == interjection2);
+		
+		System.out.println("RES:" + (interjection1 == null?interjection2==null:interjection1.equals(interjection2)));
+	
+		String eggs1 = "Cackle fruit";
+		String eggs2 = "Cackle fruit";
+		String eggs3 = "Caakle fruit";
+		String eggs4 = "Cockle fruit";
+		
+		System.out.println("eggs1 compareTo eggs2:" + eggs1.compareTo(eggs2));
+		System.out.println("eggs1 compareTo eggs3:" + eggs1.compareTo(eggs3));
+		System.out.println("eggs1 compareTo eggs4:" + eggs1.compareTo(eggs4));
+
+		
 	}
 
 }
