@@ -1,0 +1,20 @@
+Understand the Rationale and Types of Exceptions
+1) C
+2) A
+3) C
+
+Understand the Nature of Exceptions
+4) A, B, C, E
+5) B
+6) B
+7) A
+
+Alter the Program Flow
+8) A, C
+9) A
+
+Recognize Common Exceptions
+10) A, B, C
+11) B
+12) D
+   
